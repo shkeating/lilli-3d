@@ -30,10 +30,10 @@ theme:
   theme_colors:
     background: '#ffffff'
     text: '#101010'
-    link: '#542BFF'
+    link: '#5A8200'
     background_dark: '#101010'
     text_dark: '#E1E1E1'
-    link_dark: '#FFFFFF'
+    link_dark: '#BADD13'
   theme_typography:
     font: Overpass Mono
     font_weight: 400
