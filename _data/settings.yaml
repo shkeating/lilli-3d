@@ -35,10 +35,10 @@ theme:
     text_dark: '#E1E1E1'
     link_dark: '#BADD13'
   theme_typography:
-    font: Overpass Mono
+    font: Inter
     font_weight: 400
     font_scale: 100
-    line_height_scale: 100
+    line_height_scale: 150
   theme_features:
     enable_dark_mode: true
     item_output_limit: 48
