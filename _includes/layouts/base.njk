@@ -33,6 +33,10 @@
 			{% include "components/analytics.njk" %}
 		{% endif %}
 
+		{% for file in modules %}
+			<script type="module" src="/js-modules/{{ file }}"></script>
+		{% endfor %}
+
 	</body>
 
 </html>
