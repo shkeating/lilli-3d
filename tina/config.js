@@ -87,7 +87,7 @@ export default defineConfig({
               },
               {
                 type: "string",
-                label: "Alternative Text",
+                label: "Alternative Text - leave blank if decorative",
                 name: "alt",
               },
               {
