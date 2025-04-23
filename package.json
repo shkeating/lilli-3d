@@ -24,7 +24,7 @@
     "uglify-js": "^3.19.2"
   },
   "dependencies": {
-    "@google/model-viewer": "^4.1.0",
-    "three": "^0.176.0"
+    "@google/model-viewer": "^4.0.0",
+    "three": "^0.174.0"
   }
 }
