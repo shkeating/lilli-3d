@@ -76,29 +76,51 @@ export default defineConfig({
             description: "The year the project was realized e.g. 2023",
           },
           {
+            name: "blocks",
+            label: "Blocks",
             type: "object",
-            label: "3D Model",
-            name: "modelViewer",
-            fields: [
+            list: true,
+            templates: [
+              // Use 'templates' here, not 'blocks'
               {
-                type: "string",
-                label: "Model Source URL",
-                name: "modelSrc",
+                name: "text",
+                label: "Text Block",
+                fields: [
+                  {
+                    type: "string",
+                    label: "Content",
+                    name: "content",
+                    ui: {
+                      component: "textarea",
+                    },
+                  },
+                ],
               },
               {
-                type: "string",
-                label: "Alternative Text - leave blank if decorative",
-                name: "alt",
-              },
-              {
-                type: "boolean",
-                label: "Enable Camera Controls",
-                name: "cameraControls",
-              },
-              {
-                type: "boolean",
-                label: "Auto Rotate",
-                name: "autoRotate",
+                name: "modelViewer",
+                label: "3D Model",
+                fields: [
+                  {
+                    type: "string",
+                    label: "Model Source URL",
+                    name: "modelSrc",
+                  },
+                  {
+                    type: "string",
+                    label: "Alternative Text",
+                    name: "alt",
+                  },
+                  {
+                    type: "boolean",
+                    label: "Enable Camera Controls",
+                    name: "cameraControls",
+                  },
+                  {
+                    type: "boolean",
+                    label: "Auto Rotate",
+                    name: "autoRotate",
+                  },
+                ],
               },
             ],
           },

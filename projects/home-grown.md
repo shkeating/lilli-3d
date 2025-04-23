@@ -18,6 +18,16 @@ description: >
   is meant to glorify these pieces that have mattered to me and reflect on the
   experiences and memories that surround them.
 year: 2019
+blocks:
+  - modelSrc: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb'
+    alt: astronaut hell yeah
+    autoRotate: true
+    _template: modelViewer
+  - modelSrc: 'https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb'
+    alt: neil
+    cameraControls: true
+    autoRotate: false
+    _template: modelViewer
 images:
   - src: /assets/uploads/homegrown/chair.jpeg
     caption: >-
