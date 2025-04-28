@@ -2,6 +2,8 @@
 layout: layouts/base.njk
 permalink: "project/{{ title | slug }}/index.html"
 section: project
+modules:
+  - "model-viewer.min.js"
 ---
 <article>
 
@@ -21,6 +23,26 @@ section: project
     </div>
 
   </header>
+
+  
+{% for block in blocks %}
+    {% if block._template === 'text' %}
+        <div class="text-block">
+            {{ block.content | safe }}
+        </div>
+    {% elif block._template === 'modelViewer' %}
+        <div class="model-viewer-wrapper">
+            <model-viewer
+                src="{{ block.modelSrc }}"
+                alt="{{ block.alt }}"
+                {% if block.cameraControls %}camera-controls{% endif %}
+                {% if block.autoRotate %}auto-rotate{% endif %}
+                style="width: 100%; height: 400px;"
+            >
+            </model-viewer>
+        </div>
+    {% endif %}
+{% endfor %}
 
   <section class="grid grid--project pb--3">
 
