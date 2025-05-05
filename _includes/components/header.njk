@@ -3,12 +3,7 @@
 	<div class="flex-header">
 		<div>
 			<a href="{{ '/' | url }}">
-				{# SEO: home page header title should be inside a h1 tag #}
-				{% if page.url == "/" %}
-							<h1>{{ settings.metadata.site_title }}</h1>
-				{% else %}
-					<span>{{ settings.metadata.site_title }}</span>
-				{% endif %}
+				<h1>{{ settings.metadata.site_title }}</h1>
 			</a>
 			<div>
 			{% if settings.metadata.site_subtitle_1 %}
