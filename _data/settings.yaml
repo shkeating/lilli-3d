@@ -35,8 +35,8 @@ theme:
     text_dark: '#E1E1E1'
     link_dark: '#BADD13'
   theme_typography:
-    font: Inter
-    font_weight: 400
+    font: Fraunces
+    font_weight: 200
     font_scale: 100
     line_height_scale: 150
   theme_features:
