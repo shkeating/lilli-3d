@@ -28,11 +28,11 @@ theme:
   theme_layout:
     space_scale: 100
   theme_colors:
-    background: '#ffffff'
+    background: '#FCF4EE'
     text: '#101010'
-    link: '#5A8200'
+    link: '#047047'
     background_dark: '#101010'
-    text_dark: '#E1E1E1'
+    text_dark: '#FFF5EF'
     link_dark: '#BADD13'
   theme_typography:
     font: Fraunces
