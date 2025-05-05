@@ -224,6 +224,7 @@ header h1 {
 
 header .sub {
 	font-size: 1.5rem;
+	line-height: 1;
 }
 
 .hide {
@@ -304,8 +305,6 @@ img {
 		grid-column: span 2/5;
 	}
 
-	.grid--header,
-	.grid--intro,
 	.grid--project,
 	.grid--description,
 	.grid--footer {
@@ -425,4 +424,11 @@ img {
 
 .mb--8 {
 	margin-bottom: calc(var(--space) * 8);
+}
+
+/* 3d models */
+
+model-viewer {
+	width: 100%;
+	height: 1000px;
 }
