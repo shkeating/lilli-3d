@@ -18,11 +18,10 @@ description: >
   reflect on the experiences and memories that surround them.
 year: 2019
 blocks:
-  - modelSrc: 'https://cdn.tinyglb.com/models/e2eea01f6a97455ebd56361b3c31598c.glb'
+  - modelSrc: "https://cdn.tinyglb.com/models/e2eea01f6a97455ebd56361b3c31598c.glb"
     alt: >-
       a scuplture of a green couch formed entirely of pinch formed ceramic. It
       is the size of a normal couch.
-    cameraOrigin: '-439.7deg 78.76deg 10.9m'
     cameraControls: true
     autoRotate: true
     disableZoom: true
@@ -39,11 +38,9 @@ blocks:
       to me and reflect on the experiences and memories that surround them.
     _template: text
 images:
-  - {}
   - src: /assets/uploads/homegrown/chair.jpeg
     caption: >-
       a ceramic sculpture of a chair based off the chair her mom used to use at
       her desk. It has flower embellishments
 date: 2025-04-19T21:48:14.543Z
 ---
-

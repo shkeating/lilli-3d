@@ -9,16 +9,17 @@ modules:
 
   <header class="pb--4">
 
-    <div class="grid grid--intro">
+    <div class="intro">
 
-      <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
+      <h2 class="grid__item--span-4 mw--readable">{{ title }}</h2>
+      {% if year and settings.theme.theme_features.show_project_year %}
+        <h3 class="grid__item--span-4 mw--readable mb--0">
+          ({{ year }})
+        </h3>
+      {% endif %}
       <div class="grid__item--span-4 mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
         
-      {% if year and settings.theme.theme_features.show_project_year %}
-        <p class="grid__item--span-4 mw--readable mb--0">
-          {{ year }}
-        </p>
-      {% endif %}
+  
 
     </div>
 
