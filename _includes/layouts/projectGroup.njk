@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+permalink: "project-groups/index.html"
+section: project-groups
+modules:
+  - "model-viewer.min.js"
+---
+
+<article>
+
+  <header>
+    <div class="intro">
+      <h1 class="grid__item--span-4 mw--readable">Project Groups</h1>
+      <p class="grid__item--span-4 mw--readable">Explore all project groups below.</p>
+    </div>
+  </header>
+
+  <section class="project-groups">
+    {% for group in collections.projectGroup %}
+      <div class="project-group">
+        <h2><a href="{{ group.url }}">{{ group.data.title }}</a></h2>
+        <p>{{ group.data.description | safe }}</p>
+        {% if group.data.coverImage %}
+          <img src="{{ group.data.coverImage }}" alt="{{ group.data.title }}">
+        {% endif %}
+      </div>
+    {% endfor %}
+  </section>
+
+</article>
+
+{# Appended to <head> during build #}
+{% include "components/opengraph.njk" %}

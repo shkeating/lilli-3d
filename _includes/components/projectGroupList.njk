@@ -1,0 +1,40 @@
+{% if projectGroupList | length %}
+
+    <section class="columns columns--project-groups">
+
+        {% for group in projectGroupList %}
+
+            <div class="columns__item mb--1">
+
+                <a href="{{ group.url | url }}">
+
+                    <figure>
+
+                        {# Set the cover image for the project group #}
+                        {% if group.data.coverImage %}
+                            <img src="{{ group.data.coverImage }}" alt="{{ group.data.title }}">
+                        {% endif %}
+
+                        <figcaption class="pb--1">
+                            <span class="text--small arrow arrow--right">{{ group.data.title }}</span>
+                        </figcaption>
+
+                    </figure>
+
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    </section>
+
+{% else %}
+
+    <section>
+
+        <p>There are no project groups here yet.</p>
+
+    </section>
+
+{% endif %}
