@@ -81,7 +81,7 @@ export default defineConfig({
             type: "reference",
             name: "group",
             label: "Project Group",
-            description: "Select the group this project belongs to",
+            description: "Select the group this project belongs to (optional)",
             collections: ["projectGroup"],
           },
           {
