@@ -276,12 +276,19 @@ export default defineConfig({
             description: "The main content of the landing page",
           },
           {
-            type: "reference",
+            type: "object",
             name: "featuredGroups",
             label: "Featured Project Groups",
             description: "Select project groups to feature on the landing page",
-            collections: ["projectGroup"],
             list: true,
+            fields: [
+              {
+                type: "reference",
+                name: "group",
+                label: "Project Group",
+                collections: ["projectGroup"],
+              },
+            ],
           },
         ],
       },
