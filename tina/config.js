@@ -29,6 +29,34 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "projectGroup",
+        label: "Project Groups",
+        path: "project-groups",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Group Title",
+            description: "The title of the project group",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Group Description",
+            description: "A short description of the project group",
+          },
+          {
+            type: "image",
+            name: "coverImage",
+            label: "Cover Image",
+            description: "An optional cover image for the project group",
+          },
+        ],
+      },
+      {
         name: "project",
         label: "Projects",
         path: "projects",
@@ -49,6 +77,13 @@ export default defineConfig({
           },
         },
         fields: [
+          {
+            type: "reference",
+            name: "group",
+            label: "Project Group",
+            description: "Select the group this project belongs to",
+            collections: ["projectGroup"],
+          },
           {
             type: "boolean",
             name: "draft",
@@ -119,6 +154,11 @@ export default defineConfig({
                     type: "boolean",
                     label: "Auto Rotate",
                     name: "autoRotate",
+                  },
+                  {
+                    type: "string",
+                    label: "Caption",
+                    name: "caption",
                   },
                 ],
               },
@@ -212,6 +252,36 @@ export default defineConfig({
                 }
               },
             },
+          },
+        ],
+      },
+      {
+        name: "landingPage",
+        label: "Landing Page",
+        path: "landing-page",
+        format: "md",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Page Title",
+            description: "The title of the landing page",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "content",
+            label: "Content",
+            description: "The main content of the landing page",
+          },
+          {
+            type: "reference",
+            name: "featuredGroups",
+            label: "Featured Project Groups",
+            description: "Select project groups to feature on the landing page",
+            collections: ["projectGroup"],
+            list: true,
           },
         ],
       },
