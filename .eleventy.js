@@ -138,6 +138,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  //adds project groups
+  eleventyConfig.addCollection("projectGroup", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("work/*.md");
+  });
+
   // A filter to limit output of collection items
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);
