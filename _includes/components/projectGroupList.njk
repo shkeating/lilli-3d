@@ -2,21 +2,21 @@
 
     <section class="columns columns--project-groups">
 
-        {% for group in projectGroupList %}
+        {% for projectGroup in projectGroupList %}
 
             <div class="columns__item mb--1">
 
-                <a href="{{ group.url | url }}">
+                <a href="{{ projectGroup.url }}">
 
                     <figure>
 
-                        {# Set the cover image for the project group #}
-                        {% if group.data.coverImage %}
-                            <img src="{{ group.data.coverImage }}" alt="{{ group.data.title }}">
+                        {# Set the cover image for the project projectGroup #}
+                        {% if projectGroup.data.coverImage %}
+                            <img src="{{ projectGroup.data.coverImage }}" alt="{{ projectGroup.data.title }}">
                         {% endif %}
 
                         <figcaption class="pb--1">
-                            <span class="text--small arrow arrow--right">{{ group.data.title }}</span>
+                            <span class="text--small arrow arrow--right">{{ projectGroup.data.title }}</span>
                         </figcaption>
 
                     </figure>

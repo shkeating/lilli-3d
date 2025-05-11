@@ -29,10 +29,19 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "projectGroup",
-        label: "Project Groups",
-        path: "project-groups",
+        name: "projectGroup", // Internal name for the collection
+        label: "Project Groups", // This is how it will appear in TinaCMS
+        path: "work", // This is the folder where the project group files will be stored
         format: "md",
+        // set some default values for this collection
+        ui: {
+          filename: {
+            readonly: false,
+            slugify: (values) => {
+              return `${values?.title?.toLowerCase().replace(/ /g, "-")}`;
+            },
+          },
+        },
         fields: [
           {
             type: "string",
@@ -79,10 +88,13 @@ export default defineConfig({
         fields: [
           {
             type: "reference",
-            name: "group",
+            name: "projectGroup",
             label: "Project Group",
-            description: "Select the group this project belongs to (optional)",
+            description: "Select the group this project belongs to",
             collections: ["projectGroup"],
+            ui: {
+              defaultValue: "unassigned", // Set default value for unassigned projects
+            },
           },
           {
             type: "boolean",
@@ -252,43 +264,6 @@ export default defineConfig({
                 }
               },
             },
-          },
-        ],
-      },
-      {
-        name: "landingPage",
-        label: "Landing Page",
-        path: "landing-page",
-        format: "md",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Page Title",
-            description: "The title of the landing page",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "content",
-            label: "Content",
-            description: "The main content of the landing page",
-          },
-          {
-            type: "object",
-            name: "featuredGroups",
-            label: "Featured Project Groups",
-            description: "Select project groups to feature on the landing page",
-            list: true,
-            fields: [
-              {
-                type: "reference",
-                name: "group",
-                label: "Project Group",
-                collections: ["projectGroup"],
-              },
-            ],
           },
         ],
       },

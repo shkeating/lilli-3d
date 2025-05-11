@@ -1,33 +1,33 @@
 ---
 layout: layouts/base.njk
-permalink: "project-groups/index.html"
-section: project-groups
-modules:
-  - "model-viewer.min.js"
+permalink: "work/{{ title | slug }}/index.html"
+section: projectGroup 
+eleventyComputed:
+  fileSlug: "{{ title | slug }}"
 ---
 
 <article>
-
   <header>
     <div class="intro">
-      <h1 class="grid__item--span-4 mw--readable">Project Groups</h1>
-      <p class="grid__item--span-4 mw--readable">Explore all project groups below.</p>
+      <h1 class="grid__item--span-4 mw--readable">{{ title }}</h1>
+      {% if description %}
+        <p class="grid__item--span-4 mw--readable">{{ description | safe }}</p>
+      {% endif %}
+      {% if coverImage %}
+        <img src="{{ coverImage }}" alt="{{ title }}" />
+      {% endif %}
     </div>
   </header>
 
-  <section class="project-groups">
-    {% for group in collections.projectGroup %}
-      <div class="project-group">
-        <h2><a href="{{ group.url }}">{{ group.data.title }}</a></h2>
-        <p>{{ group.data.description | safe }}</p>
-        {% if group.data.coverImage %}
-          <img src="{{ group.data.coverImage }}" alt="{{ group.data.title }}">
-        {% endif %}
-      </div>
-    {% endfor %}
+  <section class="project-list">
+    <h2>Projects in {{ title }}</h2>
+    {% set projectGroupProjects = collections.projects %}
+    {% if projectGroupProjects | length %}
+      {% include "components/projectList.njk" %}
+    {% else %}
+      <p>No projects found for this group.</p>
+    {% endif %}
   </section>
-
 </article>
 
-{# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}
