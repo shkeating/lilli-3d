@@ -1,5 +1,5 @@
 ---
-projectGroup: ''
+projectGroup: work/home-grown.md
 draft: false
 title: I Found My Dream Room
 description: |
