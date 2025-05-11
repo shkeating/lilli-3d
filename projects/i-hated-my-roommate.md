@@ -1,7 +1,7 @@
 ---
 projectGroup: work/home-grown.md
 draft: false
-title: I Hated My Roommate
+title: I Didn't Like My Roommate
 description: |
   ???
 year: 2019
