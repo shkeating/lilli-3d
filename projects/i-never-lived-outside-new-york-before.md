@@ -11,5 +11,6 @@ images:
       a diaroma of my room in Pennsylvania from the time I did my artist
       residency at the Brockway Center for Arts and Technology
 date: 2025-05-11T13:26:25.430Z
+position: 10
 ---
 
