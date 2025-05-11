@@ -6,6 +6,8 @@ description: |
   5 x 4.5 x 4.5"
 year: 2019
 images:
+  - src: /assets/uploads/homegrown/I+Always+Wanted+A+Desk2.jpg
+    caption: '2'
   - src: /assets/uploads/homegrown/I+Always+Wanted+A+Desk.jpg
     caption: '1'
   - src: /assets/uploads/homegrown/I+Always+Wanted+a+Desk+2.jpeg
