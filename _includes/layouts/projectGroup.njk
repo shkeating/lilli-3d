@@ -22,11 +22,6 @@ eleventyComputed:
   <section class="project-list">
    
     {% set projectList = collections.projects | projectGroupFilter("work/"+fileSlug+".md") %}
-
-    {% if projectList | length > 0 %}
-      <h2>Projects in {{ title }}</h2>
-
-    {% endif %}
     {# the projectList component has its own conditional rendering logic, so we don't have to hide it #}
      {% include 'components/projectList.njk' %}
   </section>
