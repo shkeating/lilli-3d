@@ -8,7 +8,8 @@ year: 2019
 images:
   - src: /assets/uploads/homegrown/chair.jpeg
     caption: a front view of the ceramic sculpture of my mom's old desk chair
-  - {}
+  - src: /assets/uploads/homegrown/chair+with+title.jpeg
+    caption: a 3/4 view of the right side of Mom's Old Desk Chair
   - {}
 date: 2025-05-11T13:15:46.474Z
 ---
