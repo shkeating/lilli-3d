@@ -7,7 +7,7 @@ description: |
 year: 2019
 images:
   - src: /assets/uploads/homegrown/I+Always+Wanted+a+Desk+2.jpeg
-    caption: a diaramma of m first bedroom that had a desk
+    caption: a small scale diorama sculpture of my first dorm room at college
 date: 2025-05-11T13:22:11.648Z
 ---
 
