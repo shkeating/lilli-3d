@@ -6,4 +6,3 @@ description: >
   experiences and memories that surround them.
 coverImage: /assets/uploads/homegrown/homegrown.jpg
 ---
-
