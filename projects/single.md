@@ -1,5 +1,5 @@
 ---
-projectGroup: unassigned
+projectGroup: work/unassigned.md
 draft: false
 title: Single
 description: |

@@ -144,12 +144,19 @@ module.exports = function (eleventyConfig) {
   });
 
   //filter projects by projectGroup
-  eleventyConfig.addFilter("projectGroupFilter", function (collectionApi) {
-    return collectionApi
-      .getFilteredByGlob("work/*.md")
-      .filter((project) => project.data.projectGroup);
+  eleventyConfig.addNunjucksFilter(
+    "projectGroupFilter",
+    function (projects, group) {
+      return projects.filter((project) => {
+        console.log(project.data.projectGroup, "vs ", group);
+        return project.data.projectGroup === group;
+      });
+    }
+  );
+  eleventyConfig.addNunjucksFilter("dump", function (obj) {
+    console.log(obj);
+    return "object";
   });
-
   // A filter to limit output of collection items
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(0, limit);

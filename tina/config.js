@@ -93,7 +93,7 @@ export default defineConfig({
             description: "Select the group this project belongs to",
             collections: ["projectGroup"],
             ui: {
-              defaultValue: "unassigned", // Set default value for unassigned projects
+              defaultValue: "work/unassigned.md", // Set default value for unassigned projects
             },
           },
           {
