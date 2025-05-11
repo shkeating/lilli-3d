@@ -10,7 +10,8 @@ images:
     caption: a front view of the ceramic sculpture of my mom's old desk chair
   - src: /assets/uploads/homegrown/chair+with+title.jpeg
     caption: a 3/4 view of the right side of Mom's Old Desk Chair
-  - {}
+  - src: /assets/uploads/homegrown/gallery+view+and+chair.jpeg
+    caption: a view of Mom's old desk chair head on in the gallery
 date: 2025-05-11T13:15:46.474Z
 ---
 
