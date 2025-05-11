@@ -138,9 +138,16 @@ module.exports = function (eleventyConfig) {
     );
   });
 
-  //adds project groups
+  //adds project  projectGroups
   eleventyConfig.addCollection("projectGroup", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("project-groups/*.md");
+    return collectionApi.getFilteredByGlob("work/*.md");
+  });
+
+  //filter projects by projectGroup
+  eleventyConfig.addFilter("projectGroupFilter", function (collectionApi) {
+    return collectionApi
+      .getFilteredByGlob("work/*.md")
+      .filter((project) => project.data.projectGroup);
   });
 
   // A filter to limit output of collection items
@@ -237,6 +244,11 @@ module.exports = function (eleventyConfig) {
   // Copy folders or static assets e.g. images to site output
   eleventyConfig.addPassthroughCopy({
     "assets/icons/favicon.svg": "/favicon.svg",
+  });
+
+  // Add a custom filter to get unassigned projects
+  eleventyConfig.addFilter("unassignedProjects", function (projects) {
+    return projects.filter((project) => project.projectGroup === "unassigned");
   });
 
   // Disable 11ty dev server live reload when using CMS locally
