@@ -29,6 +29,43 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "projectGroup", // Internal name for the collection
+        label: "Project Groups", // This is how it will appear in TinaCMS
+        path: "work", // This is the folder where the project group files will be stored
+        format: "md",
+        // set some default values for this collection
+        ui: {
+          filename: {
+            readonly: false,
+            slugify: (values) => {
+              return `${values?.title?.toLowerCase().replace(/ /g, "-")}`;
+            },
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Group Title",
+            description: "The title of the project group",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "description",
+            label: "Group Description",
+            description: "A short description of the project group",
+          },
+          {
+            type: "image",
+            name: "coverImage",
+            label: "Cover Image",
+            description: "An optional cover image for the project group",
+          },
+        ],
+      },
+      {
         name: "project",
         label: "Projects",
         path: "projects",
@@ -49,6 +86,16 @@ export default defineConfig({
           },
         },
         fields: [
+          {
+            type: "reference",
+            name: "projectGroup",
+            label: "Project Group",
+            description: "Select the group this project belongs to",
+            collections: ["projectGroup"],
+            ui: {
+              defaultValue: "work/unassigned.md", // Set default value for unassigned projects
+            },
+          },
           {
             type: "boolean",
             name: "draft",
@@ -119,6 +166,11 @@ export default defineConfig({
                     type: "boolean",
                     label: "Auto Rotate",
                     name: "autoRotate",
+                  },
+                  {
+                    type: "string",
+                    label: "Caption",
+                    name: "caption",
                   },
                 ],
               },

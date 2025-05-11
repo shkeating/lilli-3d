@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+permalink: "work/{{ title | slug }}/index.html"
+section: projectGroup
+eleventyComputed:
+  fileSlug: "{{ title | slug }}"
+---
+
+<article>
+  <header>
+    <div class="intro">
+      <h2 class="grid__item--span-4 mw--readable">{{ title }}</h2>
+      {% if description %}
+        <p class="grid__item--span-4 mw--readable">{{ description | safe }}</p>
+      {% endif %}
+      {% if coverImage %}
+        <img src="{{ coverImage }}" alt="{{ title }}" />
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="project-list">
+   
+    {% set projectList = collections.projects | projectGroupFilter("work/"+fileSlug+".md") %}
+    {# the projectList component has its own conditional rendering logic, so we don't have to hide it #}
+     {% include 'components/projectList.njk' %}
+  </section>
+</article>
+
+{% include "components/opengraph.njk" %}
