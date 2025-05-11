@@ -6,7 +6,8 @@ description: |
   need dimensions
 year: 2019
 images:
-  - {}
+  - src: /assets/uploads/homegrown/I+Was+a+Super+Senior3.jpg
+    caption: '3'
   - src: /assets/uploads/homegrown/I+Was+a+Super+Senior2.jpg
     caption: '2'
   - src: /assets/uploads/homegrown/I+Was+A+Super+Senior4.jpg
