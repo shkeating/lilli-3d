@@ -6,6 +6,8 @@ description: |
   10.5 x 6.5 x 5.5”
 year: 2019
 images:
+  - src: /assets/uploads/homegrown/I+Never+Lived+Outside+New+York+Before2.jpg
+    caption: A top view of the piece
   - src: /assets/uploads/homegrown/I+Never+Lived+Outside+New+York+Before.jpeg
     caption: >-
       a diaroma of my room in Pennsylvania from the time I did my artist
