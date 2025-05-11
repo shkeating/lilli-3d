@@ -6,6 +6,8 @@ description: |
   11 x 9 x 4.5”
 year: 2019
 images:
+  - src: /assets/uploads/homegrown/I+Moved+Back+Home.jpg
+    caption: '1'
   - src: /assets/uploads/homegrown/I+Moved+Back+Home+(2).jpg
     caption: '2'
   - src: /assets/uploads/homegrown/I+Moved+Back+Home.jpeg
