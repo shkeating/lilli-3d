@@ -13,5 +13,6 @@ images:
   - src: /assets/uploads/welcome-home/chair+and+table.jpeg
     caption: chair with table and objects
 date: 2025-05-13T16:17:37.899Z
+position: 10
 ---
 
