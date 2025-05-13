@@ -9,6 +9,7 @@ images:
   - src: /assets/uploads/welcome-home/chair+close+up.jpeg
     caption: detail
   - src: /assets/uploads/welcome-home/Helling_3.jpeg
+    caption: '1'
 date: 2025-05-13T16:07:45.768Z
 ---
 
