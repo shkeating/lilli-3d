@@ -8,9 +8,7 @@ modules:
 ---
 <article>
 
-  <header class="pb--4">
-
-    <div class="intro">
+  <section class="intro">
 
       <h2 class="grid__item--span-4 mw--readable">{{ title }}</h2>
       {% if year and settings.theme.theme_features.show_project_year %}
@@ -19,33 +17,29 @@ modules:
         </h3>
       {% endif %}
       <div class="grid__item--span-4 mw--readable markdown">{{ description | renderUsingMarkdown | safe }}</div>
-        
-  
+       {% for block in blocks %}
+        {% if block._template === 'text' %}
+            <div class="text-block mw--readable" >
+                {{ block.content | safe }}
+            </div>
+        {% elif block._template === 'modelViewer' %}
+            <div class="model-viewer-wrapper">
+                <model-viewer
+                    src="{{ block.modelSrc }}"
+                    alt="{{ block.alt }}"
+                    {% if block.cameraControls %}camera-controls{% endif %}
+                    {% if block.autoRotate %}auto-rotate{% endif %}
+                >
+                </model-viewer>
+            </div>
+        {% endif %}
+    {% endfor %}
 
-    </div>
-
-  </header>
-
-  
-{% for block in blocks %}
-    {% if block._template === 'text' %}
-        <div class="text-block mw--readable" >
-            {{ block.content | safe }}
-        </div>
-    {% elif block._template === 'modelViewer' %}
-        <div class="model-viewer-wrapper">
-            <model-viewer
-                src="{{ block.modelSrc }}"
-                alt="{{ block.alt }}"
-                {% if block.cameraControls %}camera-controls{% endif %}
-                {% if block.autoRotate %}auto-rotate{% endif %}
-            >
-            </model-viewer>
-        </div>
-    {% endif %}
-{% endfor %}
+  </section>
 
   <section class="grid grid--project pb--3">
+
+
 
     {% if images %}
 
