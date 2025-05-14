@@ -5,16 +5,6 @@ permalink: "/index.html"
 ---
 <article>
 
-  <header class="pb--4">
-
-    <div class="grid grid--intro">
-
-      <div class="grid__item--span-4 mw--readable markdown">{{ settings.metadata.site_description | renderUsingMarkdown | safe }}</div>
-
-    </div>
-
-  </header>
-
   {% set projectGroupList = collections.projectGroup | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectGroupList.njk" %}
 
