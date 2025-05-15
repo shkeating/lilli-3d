@@ -1,14 +1,17 @@
 {% if projectList | length %}
-	
-	<section class="columns columns--projects">
 
-		{% for project in projectList | reverse %}
+    <section class="columns columns--project">
 
-			<div class="columns__item mb--1">
+        {% for project in projectList %}
 
-				<a href="{{ project.url | url }}">
+            <div class="columns__item mb--1">
 
-					<figure>
+                <a href="{{ project.url }}" class="project-thumb pg--{{ project.data.title | slugify }}">
+
+
+                    <figure>
+                        
+
                         {# Set the thumb image for the project project #}
                         {% if project.data.thumbImage %}
 
@@ -52,28 +55,27 @@
 
 
                         {% endif %}
-						<figcaption class="pb--1{% if settings.theme.theme_features.show_project_grid_titles === false %} hide{% endif %}">
 
-							<span class="text--small arrow arrow--right">{{ project.data.title }}</span>
+                        
+                        <figcaption>
+                            <span>{{ project.data.title }}</span>
+                        </figcaption>
+                    </figure>
 
-						</figcaption>
+                </a>
 
-					</figure>
+            </div>
 
-				</a>
+        {% endfor %}
 
-			</div>
-
-		{% endfor %}
-
-	</section>
+    </section>
 
 {% else %}
 
-	<section>
+    <section>
 
-		<p>There are no projects here yet.</p>
+        <p>There are no projects here yet.</p>
 
-	</section>
+    </section>
 
 {% endif %}
