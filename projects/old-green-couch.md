@@ -19,6 +19,6 @@ images:
   - src: /assets/uploads/homegrown/couch+with+show+title.jpeg
   - src: /assets/uploads/homegrown/gallery+view+couch+right.jpeg
 date: 2025-04-19T21:48:14.543Z
-position: 0
+position: 999
 ---
 

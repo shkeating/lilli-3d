@@ -4,9 +4,9 @@
 
         {% for project in projectList %}
 
-            <div class="columns__item mb--1">
+            <div class="columns__item mb--1 p--{{ project.data.title | slugify }}">
 
-                <a href="{{ project.url }}" class="project-thumb pg--{{ project.data.title | slugify }}">
+                <a href="{{ project.url }}" class="project-thumb">
 
 
                     <figure>
