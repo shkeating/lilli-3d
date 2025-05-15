@@ -3,12 +3,14 @@ layout: layouts/base.njk
 section: home
 permalink: "/index.html"
 ---
-<article class="home-gallery">
 
+<h2 class="p--2">exhibitions</h2>
+
+<div class="home-gallery p--2 pb--8">
   {% set projectGroupList = collections.projectGroup | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectGroupList.njk" %}
 
-</article>
+</div>
 
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}

@@ -6,13 +6,11 @@
 
             <div class="columns__item mb--1">
 
-                <a href="{{ projectGroup.url }}" class="project-thumb--{{ projectGroup.data.title | slugify }}">
+                <a href="{{ projectGroup.url }}" class="project-thumb pg--{{ projectGroup.data.title | slugify }}">
 
 
                     <figure>
-                        <figcaption class="pb--1">
-                            <span class="text--small arrow arrow--right">{{ projectGroup.data.title }}</span>
-                        </figcaption>
+                        
 
                         {# Set the cover image for the project projectGroup #}
                         {% if projectGroup.data.coverImage %}
@@ -59,7 +57,9 @@
                         {% endif %}
 
                         
-
+                        <figcaption>
+                            <span>{{ projectGroup.data.title }}</span>
+                        </figcaption>
                     </figure>
 
                 </a>
