@@ -4,6 +4,7 @@ draft: false
 title: I Always Wanted A Desk
 description: |
   5 x 4.5 x 4.5"
+thumbImage: /assets/uploads/homegrown/desk.png
 year: 2019
 images:
   - src: /assets/uploads/homegrown/I+Always+Wanted+A+Desk2.jpg

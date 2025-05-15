@@ -4,6 +4,7 @@ draft: false
 title: Object Studies
 description: |
   Stoneware, glaze
+thumbImage: /assets/uploads/welcome-home/objects.png
 year: 2017
 images:
   - src: /assets/uploads/welcome-home/table+close+up+cup.jpeg

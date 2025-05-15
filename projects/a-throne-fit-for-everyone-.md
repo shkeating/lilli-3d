@@ -4,6 +4,7 @@ draft: false
 title: 'A Throne Fit for Everyone '
 description: |
   Stoneware glaze - 22x23x36”
+thumbImage: /assets/uploads/throne.png
 year: 2017
 blocks:
   - modelSrc: /assets/models/throne.glb

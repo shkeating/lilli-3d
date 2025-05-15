@@ -4,6 +4,7 @@ draft: false
 title: I Was a Super Senior
 description: |
   need dimensions
+thumbImage: /assets/uploads/homegrown/supersenior.png
 year: 2019
 images:
   - src: /assets/uploads/homegrown/I+Was+a+Super+Senior3.jpg

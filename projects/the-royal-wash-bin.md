@@ -4,6 +4,7 @@ draft: false
 title: The Royal Wash Bin
 description: |
   Stoneware, glaze - 20x18x35”
+thumbImage: /assets/uploads/welcome-home/washbin.png
 year: 2017
 images:
   - src: /assets/uploads/welcome-home/sink+and+towel+rack.jpeg

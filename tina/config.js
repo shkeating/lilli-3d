@@ -125,6 +125,13 @@ export default defineConfig({
             description: "The project's short description",
           },
           {
+            type: "image",
+            name: "thumbImage",
+            label: "Thumbnail Image",
+            description:
+              "Image to represent project on home page. preferable if it has a transparent background",
+          },
+          {
             type: "number",
             name: "year",
             label: "Year",
