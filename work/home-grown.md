@@ -4,6 +4,6 @@ description: >
   a solo exhibition exploring beloved furniture from my past and present,
   glorifying these pieces that have mattered to me and reflect on the
   experiences and memories that surround them.
-coverImage: /assets/uploads/couch-trans.png
+coverImage: /assets/uploads/homegrown/couch-trans.png
 ---
 

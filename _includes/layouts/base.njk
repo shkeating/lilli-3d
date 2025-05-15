@@ -3,7 +3,7 @@
 
 	{% include "components/head.njk" %}
 
-	<body class="grid grid--body">
+	<body class="grid grid--body {{ section | slugify}}">
 
 		{% include "components/header.njk" %}
 

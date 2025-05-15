@@ -261,6 +261,23 @@ img {
 	align-content: center;
 }
 
+
+/* home page */
+
+.project-thumb--unassigned {
+	display: none;
+}
+
+.home-gallery {
+	margin-top: -8rem;
+}
+
+.home main {
+	background: rgb(106 94 96 / 16%);
+	margin-top: 121px;
+	position: relative;
+}
+
 /* Media Queries */
 
 /* Tablet Breakpoint */
@@ -344,8 +361,8 @@ img {
 	}
 
 	.columns {
-		-moz-column-count: 4;
-		column-count: 4;
+		-moz-column-count: 2;
+		column-count: 2;
 	}
 
 	[data-orientation] {
@@ -354,6 +371,10 @@ img {
 
 	[data-orientation=portrait] {
 		grid-column: 3 / span 2;
+	}
+
+	.home-gallery {
+		margin-top: -11rem;
 	}
 
 }

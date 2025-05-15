@@ -3,7 +3,7 @@ layout: layouts/base.njk
 section: home
 permalink: "/index.html"
 ---
-<article>
+<article class="home-gallery">
 
   {% set projectGroupList = collections.projectGroup | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectGroupList.njk" %}
