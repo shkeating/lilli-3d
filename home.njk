@@ -3,22 +3,14 @@ layout: layouts/base.njk
 section: home
 permalink: "/index.html"
 ---
-<article>
 
-  <header class="pb--4">
+<h2 class="p--2">exhibitions</h2>
 
-    <div class="grid grid--intro">
-
-      <div class="grid__item--span-4 mw--readable markdown">{{ settings.metadata.site_description | renderUsingMarkdown | safe }}</div>
-
-    </div>
-
-  </header>
-
+<div class="home-gallery p--2 pb--8">
   {% set projectGroupList = collections.projectGroup | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectGroupList.njk" %}
 
-</article>
+</div>
 
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}

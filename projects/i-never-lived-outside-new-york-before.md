@@ -5,6 +5,11 @@ title: I Never Lived Outside New York Before
 description: |
   10.5 x 6.5 x 5.5”
 year: 2019
+blocks:
+  - modelSrc: /assets/models/newyork.glb
+    cameraControls: true
+    autoRotate: true
+    _template: modelViewer
 images:
   - src: /assets/uploads/homegrown/I+Never+Lived+Outside+New+York+Before2.jpg
     caption: A top view of the piece

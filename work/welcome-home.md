@@ -8,11 +8,11 @@ description: >
   we appreciate in reference to our well-being. Once they are unavailable, their
   absence is immediately noticeable. By shifting scale, texture, and color, I
   force these unnoticed objects to become a spectacle. This recontextualizes
-  them into a strange, yet almost familiar, still-life setting. 
+  them into a strange, yet almost familiar, still-life setting.
 
 
   Welcome Home! was my thesis exhibition at SUNY New Paltz, receiving my
-  Bachelor of Fine Arts in Ceramics. 
-coverImage: /assets/uploads/full.jpeg
+  Bachelor of Fine Arts in Ceramics.
+thumbImage: /assets/uploads/wh-trans-sized.png
+coverImage: /assets/uploads/wh-trans-sized.png
 ---
-

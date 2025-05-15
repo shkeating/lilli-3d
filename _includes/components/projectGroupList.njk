@@ -6,19 +6,60 @@
 
             <div class="columns__item mb--1">
 
-                <a href="{{ projectGroup.url }}">
+                <a href="{{ projectGroup.url }}" class="project-thumb pg--{{ projectGroup.data.title | slugify }}">
+
 
                     <figure>
+                        
 
-                        {# Set the cover image for the project projectGroup #}
-                        {% if projectGroup.data.coverImage %}
-                            <img src="{{ projectGroup.data.coverImage }}" alt="{{ projectGroup.data.title }}">
+                        {# Set the thumb image for the project projectGroup #}
+                        {% if projectGroup.data.thumbImage %}
+
+                            {% set image = projectGroup.data.thumbImage %}
+
+                            {# Make sure the image is an object #}
+                            {% if image is string %}
+                                {% set image = { "src": image } %}
+                            {% endif %}
+                   
+                            {# Make an array of the enabled image formats from settings.yaml #}
+                            {% set outputFormats = [] %}
+                            {% for format, i in settings.images %}
+                                {% if i.enabled === true %}
+                                    {{ '' if outputFormats.push(format) }}
+                                {% endif %}
+                            {% endfor %}
+
+                            {# Create an object for our project thumbnail image parameters which we can then
+                    destructure inside our shortcode function. See eleventy.js for what's going on #}
+                            {% set params = 
+                                {
+                                    "src": image.src,
+                                    "alt": image.caption or title,
+                                    "loadingType": "eager" if (loop.first and section != "project") else "lazy",
+                                    "viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 45vw, 85vw",
+                                    "outputWidths": [
+                                        settings.config.image_grid_width_sm,
+                                        settings.config.image_grid_width_md,
+                                        settings.config.image_grid_width_lg
+                                    ],
+                                    "outputFormats": outputFormats,
+                                    "outputQualityJpeg": settings.images.jpeg.quality,
+                                    "outputQualityWebp": settings.images.webp.quality,
+                                    "outputQualityAvif": settings.images.avif.quality
+                                }
+                            %}
+
+                            {# The image shortcode #}
+                            {% generateImage params %}
+
+
                         {% endif %}
 
-                        <figcaption class="pb--1">
-                            <span class="text--small arrow arrow--right">{{ projectGroup.data.title }}</span>
+                        
+                        <figcaption>
+                            <span>{{ projectGroup.data.title }}</span>
                         </figcaption>
-
                     </figure>
 
                 </a>

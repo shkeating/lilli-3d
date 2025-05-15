@@ -27,6 +27,8 @@ module.exports = function (eleventyConfig) {
       "js-modules/model-viewer.min.js",
   });
 
+  eleventyConfig.addPassthroughCopy("assets/models");
+
   // https://www.11ty.dev/docs/plugins/image/
   // Generate PNG icon files and a link tag from a source SVG or PNG file
   eleventyConfig.addShortcode("favicon", async function (src) {

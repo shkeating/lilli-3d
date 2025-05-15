@@ -45,6 +45,11 @@ body {
 	transition: background-color var(--transition-time) ease;
 }
 
+main {
+	padding: 0 2rem 2rem;
+}
+
+
 /* Grid */
 
 .grid {
@@ -261,6 +266,74 @@ img {
 	align-content: center;
 }
 
+
+/* home page */
+
+
+.pg--unassigned {
+	display: none;
+}
+
+
+.home main {
+	padding: 0;
+}
+
+.home .home-gallery {
+	background: rgb(106 94 96 / 16%);
+	margin-top: 5rem;
+	position: relative;
+}
+
+.columns--project-groups {
+	margin-top: -8rem;
+}
+
+.project-thumb figure {
+	display: flex;
+	flex-direction: column;
+}
+
+.project-thumb figcaption span {
+	font-size: 2rem;
+	color: var(--color-link);
+	transition: 0.5s color ease;
+	line-height: 0;
+}
+
+.project-thumb:hover figcaption span,
+.project-thumb:focus figcaption span {
+	color: #cc4455;
+	text-decoration: underline;
+	text-decoration-style: wavy;
+}
+
+/* project group page */
+
+.title {
+	font-size: clamp(2.5rem, 10vw, 8rem);
+}
+
+.projectgroup main {
+	padding: 0;
+}
+
+.projectgroup article header {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	color: #fff;
+	background-color: black;
+}
+
+/* project page */
+.model-viewer-wrapper {
+
+	background: linear-gradient(180deg, rgba(204, 68, 85, 0) 44%, rgba(204, 68, 85, 0.09) 45%);
+	margin: -4rem -2rem 2rem;
+}
+
 /* Media Queries */
 
 /* Tablet Breakpoint */
@@ -344,8 +417,8 @@ img {
 	}
 
 	.columns {
-		-moz-column-count: 4;
-		column-count: 4;
+		-moz-column-count: 2;
+		column-count: 2;
 	}
 
 	[data-orientation] {
@@ -354,6 +427,10 @@ img {
 
 	[data-orientation=portrait] {
 		grid-column: 3 / span 2;
+	}
+
+	.columns--project-groups {
+		margin-top: -10rem;
 	}
 
 }
