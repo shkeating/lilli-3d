@@ -13,6 +13,6 @@ description: >
 
   Welcome Home! was my thesis exhibition at SUNY New Paltz, receiving my
   Bachelor of Fine Arts in Ceramics.
+thumbImage: /assets/uploads/wh-trans-sized.png
 coverImage: /assets/uploads/wh-trans-sized.png
 ---
-

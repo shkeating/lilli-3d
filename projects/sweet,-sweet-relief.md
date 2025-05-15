@@ -5,6 +5,11 @@ title: 'Sweet, Sweet Relief'
 description: |
   Stoneware, glaze 18x20x36”
 year: 2017
+blocks:
+  - modelSrc: /assets/models/sweetsweet.glb
+    cameraControls: false
+    autoRotate: true
+    _template: modelViewer
 images:
   - src: /assets/uploads/welcome-home/Helling_1.jpeg
     caption: '1'

@@ -59,9 +59,17 @@ export default defineConfig({
           },
           {
             type: "image",
+            name: "thumbImage",
+            label: "Thumbnail Image",
+            description:
+              "Image to represent project gorup on home page. preferable if it has a transparent background",
+          },
+          {
+            type: "image",
             name: "coverImage",
             label: "Cover Image",
-            description: "An optional cover image for the project group",
+            description:
+              "An optional cover image for the project group, displays on project group index page",
           },
         ],
       },

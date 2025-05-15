@@ -45,6 +45,11 @@ body {
 	transition: background-color var(--transition-time) ease;
 }
 
+main {
+	padding: 0 2rem 2rem;
+}
+
+
 /* Grid */
 
 .grid {
@@ -301,6 +306,32 @@ img {
 	color: #cc4455;
 	text-decoration: underline;
 	text-decoration-style: wavy;
+}
+
+/* project group page */
+
+.title {
+	font-size: clamp(2.5rem, 10vw, 8rem);
+}
+
+.projectgroup main {
+	padding: 0;
+}
+
+.projectgroup article header {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	color: #fff;
+	background-color: black;
+}
+
+/* project page */
+.model-viewer-wrapper {
+
+	background: linear-gradient(180deg, rgba(204, 68, 85, 0) 44%, rgba(204, 68, 85, 0.09) 45%);
+	margin: -4rem -2rem 2rem;
 }
 
 /* Media Queries */

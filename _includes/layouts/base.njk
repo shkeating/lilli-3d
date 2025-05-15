@@ -3,11 +3,11 @@
 
 	{% include "components/head.njk" %}
 
-	<body class="grid grid--body {{ section | slugify}}">
+	<body class="grid grid--body {{ section | slugify}} {{title | slugify}}">
 
 		{% include "components/header.njk" %}
 
-		<main class="p--2 pb--8">
+		<main>
 			{# The main page/template content #}
 			{{ layoutContent | safe }}
 		</main>

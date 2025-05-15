@@ -5,6 +5,12 @@ title: I Didn't Want to Live Here
 description: |
   ???
 year: 2017
+blocks:
+  - modelSrc: /assets/models/didntwant.glb
+    alt: room diaroma 3d model
+    cameraControls: true
+    autoRotate: true
+    _template: modelViewer
 images:
   - src: /assets/uploads/homegrown/I+Didn't+Want+to+Live+Here2.jpg
     caption: '2'

@@ -7,60 +7,16 @@ eleventyComputed:
 ---
 
 <article>
-  <header>
-    <div class="intro">
-      <h2 class="grid__item--span-4 mw--readable">{{ title }}</h2>
+
+  <header id="{{ section }}-{{ title | slug }}" class="p--2">
+    <h2 class="title">{{ title }}</h2>
       {% if description %}
         <p class="grid__item--span-4 mw--readable">{{ description | safe }}</p>
       {% endif %}
-       {# Set the cover image for the project projectGroup #}
-                        {% if coverImage %}
-
-                            {% set image = coverImage %}
-
-                            {# Make sure the image is an object #}
-                            {% if image is string %}
-                                {% set image = { "src": image } %}
-                            {% endif %}
-                   
-                            {# Make an array of the enabled image formats from settings.yaml #}
-                            {% set outputFormats = [] %}
-                            {% for format, i in settings.images %}
-                                {% if i.enabled === true %}
-                                    {{ '' if outputFormats.push(format) }}
-                                {% endif %}
-                            {% endfor %}
-
-                            {# Create an object for our project thumbnail image parameters which we can then
-                    destructure inside our shortcode function. See eleventy.js for what's going on #}
-                            {% set params = 
-                                {
-                                    "src": image.src,
-                                    "alt": image.caption or title,
-                                    "loadingType": "eager" if (loop.first and section != "project") else "lazy",
-                                    "viewportSizes": "(min-width: 1140px) 22vw, (min-width: 540px) 45vw, 85vw",
-                                    "outputWidths": [
-                                        settings.config.image_grid_width_sm,
-                                        settings.config.image_grid_width_md,
-                                        settings.config.image_grid_width_lg
-                                    ],
-                                    "outputFormats": outputFormats,
-                                    "outputQualityJpeg": settings.images.jpeg.quality,
-                                    "outputQualityWebp": settings.images.webp.quality,
-                                    "outputQualityAvif": settings.images.avif.quality
-                                }
-                            %}
-
-                            {# The image shortcode #}
-                            {% generateImage params %}
-
-
-                        {% endif %}
-    </div>
+    
   </header>
 
-  <section class="project-list">
-   
+  <section class="project-list p--2">
     {% set projectList = collections.projects | projectGroupFilter("work/"+fileSlug+".md") %}
     {# the projectList component has its own conditional rendering logic, so we don't have to hide it #}
      {% include 'components/projectList.njk' %}

@@ -6,7 +6,7 @@ description: |
   77 x 33 x 33”
 year: 2019
 blocks:
-  - modelSrc: 'https://cdn.tinyglb.com/models/e2eea01f6a97455ebd56361b3c31598c.glb'
+  - modelSrc: /assets/models/grncouch.glb
     alt: >-
       a scuplture of a green couch formed entirely of pinch formed ceramic. It
       is the size of a normal couch.

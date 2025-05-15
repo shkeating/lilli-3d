@@ -5,6 +5,11 @@ title: I Found My Dream Room
 description: |
   10.5 x 6 x 4.5”
 year: 2019
+blocks:
+  - modelSrc: /assets/models/dreamroom.glb
+    cameraControls: true
+    autoRotate: true
+    _template: modelViewer
 images:
   - src: /assets/uploads/homegrown/I+Found+My+Dream+Room.jpg
   - src: /assets/uploads/homegrown/I+Found+my+Dream+Room+2.jpeg
