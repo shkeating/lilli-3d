@@ -4,6 +4,7 @@ draft: false
 title: I Never Lived Outside New York Before
 description: |
   10.5 x 6.5 x 5.5”
+thumbImage: /assets/uploads/homegrown/outsideny.png
 year: 2019
 blocks:
   - modelSrc: /assets/models/newyork.glb

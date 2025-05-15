@@ -4,6 +4,7 @@ draft: false
 title: Old Green Couch
 description: |
   77 x 33 x 33”
+thumbImage: /assets/uploads/homegrown/couch-trans.png
 year: 2019
 blocks:
   - modelSrc: /assets/models/grncouch.glb

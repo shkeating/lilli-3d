@@ -4,6 +4,7 @@ draft: false
 title: I Didn't Want to Live Here
 description: |
   ???
+thumbImage: /assets/uploads/homegrown/didnwantto.png
 year: 2017
 blocks:
   - modelSrc: /assets/models/didntwant.glb

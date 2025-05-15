@@ -4,6 +4,7 @@ draft: false
 title: Mom's Old Desk Chair
 description: |
   15 x 15 x 34”
+thumbImage: /assets/uploads/homegrown/momchair.png
 year: 2019
 blocks:
   - modelSrc: /assets/models/deskchair.glb

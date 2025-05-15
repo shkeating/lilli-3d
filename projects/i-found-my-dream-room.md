@@ -4,6 +4,7 @@ draft: false
 title: I Found My Dream Room
 description: |
   10.5 x 6 x 4.5”
+thumbImage: /assets/uploads/homegrown/dreamroom.png
 year: 2019
 blocks:
   - modelSrc: /assets/models/dreamroom.glb

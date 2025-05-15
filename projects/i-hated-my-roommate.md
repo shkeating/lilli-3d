@@ -4,6 +4,7 @@ draft: false
 title: I Didn't Like My Roommate
 description: |
   ???
+thumbImage: /assets/uploads/homegrown/didntlikeroomate.png
 year: 2019
 images:
   - src: /assets/uploads/homegrown/I+Didn't+Like+my+Roommate.jpg

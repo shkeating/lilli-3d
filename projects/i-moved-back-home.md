@@ -4,6 +4,7 @@ draft: false
 title: I Moved Back Home
 description: |
   11 x 9 x 4.5”
+thumbImage: /assets/uploads/homegrown/backhome.png
 year: 2019
 images:
   - src: /assets/uploads/homegrown/I+Moved+Back+Home.jpg

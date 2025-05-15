@@ -4,6 +4,7 @@ draft: false
 title: 'Sweet, Sweet Relief'
 description: |
   Stoneware, glaze 18x20x36”
+thumbImage: /assets/uploads/welcome-home/sweet.png
 year: 2017
 blocks:
   - modelSrc: /assets/models/sweetsweet.glb
