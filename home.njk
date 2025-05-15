@@ -6,11 +6,20 @@ permalink: "/index.html"
 
 <h2 class="p--2">exhibitions</h2>
 
-<div class="home-gallery p--2 pb--8">
+<div class="home-gallery p--2">
   {% set projectGroupList = collections.projectGroup | limit(settings.theme.theme_features.item_output_limit or 48) %}
   {% include "components/projectGroupList.njk" %}
 
 </div>
+
+
+<section class="project-list p--2 pb--8">
+  <h2>projects</h2>
+    {% set projectList = collections.projects | projectGroupFilter("work/unassigned.md") %}
+    {# the projectList component has its own conditional rendering logic, so we don't have to hide it #}
+     {% include 'components/projectList.njk' %}
+</section>
+
 
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}
