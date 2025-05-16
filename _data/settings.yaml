@@ -10,13 +10,13 @@ config:
     Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 metadata:
-  site_url: 'https://https://lilli-3d.netlify.app/'
+  site_url: "https://https://lilli-3d.netlify.app/"
   site_title: Lillian Helling
   site_subtitle_1: Ceramic Sculpture Artist
-  site_subtitle_2: ''
-  site_description: ''
+  site_subtitle_2: ""
+  site_description: ""
   site_email: lillihelling@gmail.com
-  site_social_url: 'https://www.instagram.com/lillihelling'
+  site_social_url: "https://www.instagram.com/lillihelling"
   site_icon_svg: /assets/uploads/toiletfavicon.svg
   site_icon_png: /assets/uploads/web-app-manifest-512x512.png
   site_ga4_id: G-9FSEQCYMT1
@@ -28,12 +28,12 @@ theme:
   theme_layout:
     space_scale: 100
   theme_colors:
-    background: '#FCF4EE'
-    text: '#101010'
-    link: '#047047'
-    background_dark: '#101010'
-    text_dark: '#FFF5EF'
-    link_dark: '#BADD13'
+    background: "#FCF4EE"
+    text: "#101010"
+    link: "#047047"
+    background_dark: "#101010"
+    text_dark: "#FFF5EF"
+    link_dark: "#BADD13"
   theme_typography:
     font: Fraunces
     font_weight: 200
@@ -41,7 +41,7 @@ theme:
     line_height_scale: 150
   theme_features:
     enable_dark_mode: true
-    item_output_limit: 48
+    item_output_limit: 4
     transition_duration: 300
     show_project_year: true
     show_project_grid_titles: true
