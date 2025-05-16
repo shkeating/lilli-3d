@@ -11,7 +11,7 @@
 # Output directory and build command
 [build]
   publish = "_site"
-  command = "npx tinacms build && eleventy"
+  command = "NODE_OPTIONS=--max-old-space-size=2048 npx tinacms build && eleventy"
 
 # Cache generated content between builds (e.g. images)
 [[plugins]]
