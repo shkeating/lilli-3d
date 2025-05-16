@@ -3,6 +3,11 @@
 # netlify.toml override any corresponding settings in the Netlify UI.
 # https://www.netlify.com/docs/netlify-toml-reference/
 
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Content-Security-Policy = "script-src 'self' 'unsafe-inline' *.netlify.app *.netlify.com;"
+
 # Output directory and build command
 [build]
   publish = "_site"
