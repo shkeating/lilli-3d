@@ -95,9 +95,5 @@ modules:
   
 </article>
 
-{# Output a list of random projects, excluding the current project, default limit of 48 #}
-{% set projectList = collections.projects | randomLimit((settings.theme.theme_features.item_output_limit or 48), page.url) %}
-{% include "components/projectList.njk" %}
-
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}
