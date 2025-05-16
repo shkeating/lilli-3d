@@ -9,6 +9,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 const Image = require("@11ty/eleventy-img");
 const MarkdownIt = require("markdown-it");
 const mdRender = new MarkdownIt();
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("renderUsingMarkdown", function (rawString) {
@@ -123,6 +124,8 @@ module.exports = function (eleventyConfig) {
 
   // Add 11ty helmet plugin, for appending elements to <head>
   eleventyConfig.addPlugin(eleventyHelmetPlugin);
+
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Add support for YAML data files with .yaml extension
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
