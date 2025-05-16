@@ -24,6 +24,7 @@
     "uglify-js": "^3.19.2"
   },
   "dependencies": {
+    "@11ty/eleventy-navigation": "^1.0.4",
     "@google/model-viewer": "^4.1.0"
   }
 }

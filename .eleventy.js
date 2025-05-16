@@ -124,6 +124,8 @@ module.exports = function (eleventyConfig) {
   // Add 11ty helmet plugin, for appending elements to <head>
   eleventyConfig.addPlugin(eleventyHelmetPlugin);
 
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   // Add support for YAML data files with .yaml extension
   eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 
