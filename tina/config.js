@@ -29,6 +29,57 @@ export default defineConfig({
   schema: {
     collections: [
       {
+        name: "page",
+        label: "Pages",
+        path: "pages",
+        format: "md",
+        ui: {
+          filename: {
+            readonly: false,
+            slugify: (values) => {
+              return `${values?.title?.toLowerCase().replace(/ /g, "-")}`;
+            },
+          },
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+          {
+            type: "object",
+            name: "seo",
+            label: "SEO",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "SEO Title",
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Meta Description",
+              },
+              {
+                type: "boolean",
+                name: "no_index",
+                label: "Prevent Indexing",
+              },
+            ],
+          },
+        ],
+      },
+      {
         name: "projectGroup", // Internal name for the collection
         label: "Project Groups", // This is how it will appear in TinaCMS
         path: "work", // This is the folder where the project group files will be stored
