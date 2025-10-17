@@ -268,6 +268,17 @@ module.exports = function (eleventyConfig) {
     liveReload: false,
   });
 
+  // navigation item display
+    eleventyConfig.addCollection("pages", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("pages/*.md");
+  });
+
+  // Add filter to capitalize first letter
+  eleventyConfig.addFilter("capitalize", function(str) {
+    if (!str) return "";
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+
   return {
     templateFormats: ["md", "njk", "liquid"],
     pathPrefix: "/",
@@ -281,4 +292,9 @@ module.exports = function (eleventyConfig) {
       output: "_site",
     },
   };
+
+
+
+
+
 };

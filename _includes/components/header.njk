@@ -15,9 +15,15 @@
 			{% endif %}
 			</div>
 		</div>
+		<div class="header-controls">
+			<nav>
+			{%- for page in collections.pages -%}
+				<a href="{{ page.url }}">{{ page.data.title | capitalize }}</a>
+			{%- endfor -%}
+			</nav>
 		{% if settings.theme.theme_features.enable_dark_mode %}
 
-			<div>
+			
 				<div class="dark-toggle">
 					<label for="toggle" class="toggle__label">
 						<span class="toggle__text">Toggle Dark Mode</span>
@@ -28,9 +34,10 @@
 						</svg>
 					</label>
 				</div>
-			</div>
+			
 
 		{% endif %}
+		</div>
 
 	</div>
 	
