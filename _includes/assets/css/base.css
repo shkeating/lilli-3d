@@ -221,6 +221,7 @@ h3 {
 
 p {
 	margin-bottom: var(--space);
+	max-width: 66ch;
 }
 
 /* header styles */
