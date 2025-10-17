@@ -461,6 +461,25 @@ nav a:hover {
 	font-size: 1.2rem;
 }
 
+/* page single */
+.page-content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-content.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-content.two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Media Queries */
 
 /* Tablet Breakpoint */
