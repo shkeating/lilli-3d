@@ -403,8 +403,7 @@ footer {
 .project-thumb:hover figcaption span,
 .project-thumb:focus figcaption span {
 	color: #cc4455;
-	text-decoration: underline;
-	text-decoration-style: wavy;
+
 }
 
 
@@ -421,11 +420,16 @@ footer {
 	position: relative;
 }
 
+.project-home-list figure {
+	align-items: center;
+}
+
+
 .project-home-list figure::after {
 	background: var(--color-floor);
 	border-radius: 100%;
 	position: absolute;
-	width: 100%;
+	width: 11rem;
 	aspect-ratio: 1 / 1;
 	content: ' ';
 }
