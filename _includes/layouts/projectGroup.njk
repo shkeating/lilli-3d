@@ -6,6 +6,13 @@ eleventyComputed:
   fileSlug: "{{ title | slug }}"
 ---
 
+<ul class="breadcrumbs p--2 pb--1" aria-label="breadcrumbs">
+  <li>
+    <a href="/">exhibitions</a>
+  </li>
+  <li> {{title}} </li>
+</ul>
+
 <article>
 
   <header id="{{ section }}-{{ title | slug }}" class="p--2">
