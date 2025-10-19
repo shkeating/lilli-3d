@@ -56,6 +56,13 @@ export default defineConfig({
             isBody: true,
           },
           {
+            type: "rich-text",
+            name: "secondColumn",
+            label: "Second Column Content",
+            isBody: false,
+            required: false,
+          },
+          {
             type: "object",
             name: "seo",
             label: "SEO",

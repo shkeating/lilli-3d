@@ -221,6 +221,7 @@ h3 {
 
 p {
 	margin-bottom: var(--space);
+	max-width: 66ch;
 }
 
 /* header styles */
@@ -245,6 +246,35 @@ header .sub {
 img {
 	width: 100%;
 	height: auto;
+}
+
+/* page navigation */
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header-controls {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 /* Navigational Arrows */
@@ -418,7 +448,6 @@ img {
 	grid-area: 1 / 3 / 2 / 4;
 }
 
-}
 
 
 /*project single */
@@ -430,6 +459,25 @@ img {
 
 .project-item-thumb figcaption span {
 	font-size: 1.2rem;
+}
+
+/* page single */
+.page-content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-content.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-content.two-columns {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Media Queries */
