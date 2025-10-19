@@ -3,7 +3,7 @@ layout: layouts/base.njk
 permalink: "/{{ title | slug }}/index.html"
 section: page
 ---
-<article class="page-content {% if secondColumn %}two-columns{% endif %}">
+
 
   <header class="pb--4">
 
@@ -14,18 +14,18 @@ section: page
     </div>
 
   </header>
+<article class="page-content {% if secondColumn %}two-columns{% endif %}">
+
 
   <section>
 
-    {{ layoutContent | safe }}
+    {{ content | safe }}
 
   </section>
 
-  {% if secondColumn %}
   <section class="second-column">
     {{ secondColumn | safe }}
   </section>
-  {% endif %}
 
 
 </article>

@@ -59,7 +59,7 @@ export default defineConfig({
             type: "rich-text",
             name: "secondColumn",
             label: "Second Column Content",
-            isBody: false,
+            isBody: false, // Change this from true to false
             required: false,
           },
           {
