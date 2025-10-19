@@ -1,5 +1,5 @@
 ---
-title: about | Lillian Hellings
+title: about | Lillian Helling
 secondColumn: |
   ![](/assets/uploads/lilli.png)
 ---
