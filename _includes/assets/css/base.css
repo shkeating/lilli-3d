@@ -163,8 +163,6 @@ img.loaded {
 }
 
 a:hover .hover-fade {
-	-webkit-filter: grayscale(.5);
-	filter: grayscale(.5);
 	opacity: 1;
 }
 
@@ -188,6 +186,12 @@ a:visited {
 	-webkit-text-decoration: var(--link-underline) 0.05rem;
 	text-decoration: var(--link-underline) 0.05rem;
 	transition: 0.5s color ease;
+}
+
+a:hover {
+	color: #c45;
+	text-decoration: underline;
+	text-decoration-style: wavy;
 }
 
 a[href].link-nostyle {
@@ -301,6 +305,9 @@ nav a:hover {
 	content: "✽";
 	opacity: 0.5;
 }
+
+
+
 
 /* Navigational Arrows */
 
@@ -575,6 +582,7 @@ footer {
 
 	h2 {
 		font-size: 3rem;
+		white-space: nowrap;
 	}
 
 	header .sub {
