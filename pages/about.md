@@ -1,7 +1,8 @@
 ---
-title: about
 secondColumn: |
   ![](/assets/uploads/lilli.png)
+title: about
+pageImage: /assets/uploads/lilli.png
 seo:
   title: about | Lillian Helling
 ---
