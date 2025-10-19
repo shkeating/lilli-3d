@@ -14,7 +14,7 @@ permalink: "/index.html"
 
 
 <section class="project-home-list p--2">
-  <h2>projects</h2>
+  <h2 id="projects">projects</h2>
     {% set projectList = collections.projects | projectGroupFilter("work/unassigned.md") | limit(settings.theme.theme_features.item_output_limit or 4) %}
     {# the projectList component has its own conditional rendering logic, so we don't have to hide it #}
      {% include 'components/projectList.njk' %}

@@ -7,11 +7,11 @@ modules:
   - "model-viewer.min.js"
 ---
 <ul class="breadcrumbs pb--1" aria-label="breadcrumbs">
-  <li>
-    <a href="/">Projects</a>
-  </li>
   {% set groupObj = null %}
   {% if projectGroup != "work/unassigned.md" %}
+    <li>
+      <a href="/">exhibitions</a>
+    </li>
     {# normalize stored value like "work/home-grown.md" -> "home-grown" #}
     {% set groupSlug = projectGroup | replace("work/","") | replace(".md","") %}
     {% for g in collections.projectGroup %}
@@ -24,6 +24,10 @@ modules:
   {% if groupObj %}
     <li>
       <a href="{{ groupObj.url }}">{{ groupObj.data.title }}</a>
+    </li>
+  {% else %}
+    <li>
+      <a href="/#projects">projects</a>
     </li>
   {% endif %}
   <li>
@@ -121,6 +125,7 @@ modules:
   </section>
   
 </article>
+
 
 {# Appended to <head> during build #}
 {% include "components/opengraph.njk" %}
