@@ -1,5 +1,7 @@
 ---
 title: about
+secondColumn: |
+  ![](/assets/uploads/lilli.png)
 ---
 
 ## about the artist
