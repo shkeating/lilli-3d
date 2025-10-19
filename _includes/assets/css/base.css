@@ -165,7 +165,7 @@ img.loaded {
 a:hover .hover-fade {
 	-webkit-filter: grayscale(.5);
 	filter: grayscale(.5);
-	opacity: .75;
+	opacity: 1;
 }
 
 /* Typography */
@@ -286,6 +286,21 @@ nav a:hover {
 	text-decoration-style: wavy;
 }
 
+/*breadcrumbs*/
+.breadcrumbs {
+	list-style: none;
+}
+
+.breadcrumbs li {
+	display: inline;
+}
+
+.breadcrumbs li+li:before {
+	padding: 8px;
+	color: var(--color-text);
+	content: "✽";
+	opacity: 0.5;
+}
 
 /* Navigational Arrows */
 
@@ -330,6 +345,14 @@ nav a:hover {
 	background-size: 4rem 8rem;
 	height: 4rem;
 	background-repeat: repeat-x;
+}
+
+/* footer */
+
+footer {
+	padding: 40px;
+	background: var(--color-max);
+	mask: radial-gradient(30px at top, #0000 calc(100% - 1px), #000) 50%/55.5px 100%;
 }
 
 /* home page */
@@ -387,10 +410,24 @@ nav a:hover {
 
 }
 
+.project-home-list figure {
+	position: relative;
+}
+
+.project-home-list figure::after {
+	background: var(--color-floor);
+	border-radius: 100%;
+	position: absolute;
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	content: ' ';
+}
 
 .project-home-list .columns--project .project-thumb figcaption span {
 	font-size: 1.2rem;
 }
+
+
 
 /* project group page */
 

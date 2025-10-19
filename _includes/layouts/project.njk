@@ -2,10 +2,35 @@
 layout: layouts/base.njk
 permalink: "project/{{ title | slug }}/index.html"
 section: project
-projectGroup: "{{ projectGroup}}"
+projectGroup: "{{ projectGroup }}"
 modules:
   - "model-viewer.min.js"
 ---
+<ul class="breadcrumbs" aria-label="breadcrumbs">
+  <li>
+    <a href="/">Projects</a>
+  </li>
+  {% set groupObj = null %}
+  {% if projectGroup != "work/unassigned.md" %}
+    {# normalize stored value like "work/home-grown.md" -> "home-grown" #}
+    {% set groupSlug = projectGroup | replace("work/","") | replace(".md","") %}
+    {% for g in collections.projectGroup %}
+      {% if (g.fileSlug == groupSlug) or ((g.data.title | slug) == groupSlug) %}
+        {% set groupObj = g %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {% if groupObj %}
+    <li>
+      <a href="{{ groupObj.url }}">{{ groupObj.data.title }}</a>
+    </li>
+  {% endif %}
+  <li>
+    {{ title }}
+  </li>
+</ul>
+
 <article>
 
   <section class="intro">
