@@ -2,6 +2,8 @@
 title: about
 secondColumn: |
   ![](/assets/uploads/lilli.png)
+seo:
+  title: about | Lillian Helling
 ---
 
 # about the artist
