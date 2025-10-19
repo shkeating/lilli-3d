@@ -56,11 +56,11 @@ export default defineConfig({
             isBody: true,
           },
           {
-            type: "rich-text",
-            name: "secondColumn",
-            label: "Second Column Content",
-            isBody: false, // Change this from true to false
-            required: false,
+            type: "image",
+            name: "pageImage",
+            label: "Image",
+            description:
+              "image will dislay to the left on wide screens and below text on small screens",
           },
           {
             type: "object",

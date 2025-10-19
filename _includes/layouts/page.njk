@@ -5,16 +5,16 @@ section: page
 ---
 
 
-  <header class="pb--4">
+<header class="pb--4">
 
-    <div>
+  <div>
 
-      <h1>{{ title }}</h1>
+    <h1>{{ title }}</h1>
 
-    </div>
+  </div>
 
-  </header>
-<article class="page-content {% if secondColumn %}two-columns{% endif %}">
+</header>
+<article class="page-content {% if pageImage %}two-columns{% endif %}">
 
 
   <section>
@@ -24,7 +24,7 @@ section: page
   </section>
 
   <section class="second-column">
-    {{ secondColumn | safe }}
+  {{ pageImage }}
   </section>
 
 
