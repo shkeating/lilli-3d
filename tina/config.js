@@ -60,7 +60,7 @@ export default defineConfig({
             name: "pageImage",
             label: "Image",
             description:
-              "image will dislay to the left on wide screens and below text on small screens",
+              "image will display to the left on wide screens and below text on small screens",
           },
           {
             type: "object",

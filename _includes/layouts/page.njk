@@ -14,20 +14,52 @@ section: page
   </div>
 
 </header>
-<article class="page-content {% if pageImage %}two-columns{% endif %}">
+<article class="page-content">
 
 
-  <section>
+    <section>
 
-    {{ content | safe }}
+      {{ body | safe }}
 
-  </section>
+    </section>
 
-  <section class="second-column">
-  {{ pageImage }}
-  </section>
+  {% if pageImage %}
+    <section class="page-image">
+      {# This block is adapted from your project.njk template #}
 
+      {# 1. Make an array of the enabled image formats from settings.yaml #}
+      {% set outputFormats = [] %}
+      {% for format, i in settings.images %}
+        {% if i.enabled === true %}
+          {{ '' if outputFormats.push(format) }}
+        {% endif %}
+      {% endfor %}
 
+      {# 2. Create an object for our image parameters #}
+      {% set params = 
+        {
+          "src": pageImage,
+          "alt": title,
+          "classes": "grid__item grid__item--breakout",
+          "loadingType": "lazy",
+          "viewportSizes": "(min-width: 1140px) 35vw, (min-width: 540px) 90vw, 100vw",
+          "outputWidths": [ 
+            settings.config.image_width_sm,
+            settings.config.image_width_md,
+            settings.config.image_width_lg
+          ],
+          "outputFormats": outputFormats,
+          "outputQualityJpeg": settings.images.jpeg.quality,
+          "outputQualityWebp": settings.images.webp.quality,
+          "outputQualityAvif": settings.images.avif.quality
+        }
+      %}
+
+      {# 3. Call the image shortcode #}
+      {% generateImage params %}
+    </section>
+  {% endif %}
+    
 </article>
 
 {# Gets appended to <head> during build #}

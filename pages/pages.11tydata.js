@@ -1,5 +1,5 @@
 module.exports = function () {
   return {
-    layout: "layouts/base.njk",
+    layout: "layouts/page.njk",
   };
 };
